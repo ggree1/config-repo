@@ -6,3 +6,12 @@ management:
     web:
       exposure:
         include: "refresh"
+
+
+# rabbitMQ 설정
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
