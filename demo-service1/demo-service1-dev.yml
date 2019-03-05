@@ -3,7 +3,7 @@ configuration:
   projectName: Demo Service in Dev
 
 test:
-  message: dev message from demo-service1 - attached1
+  message: dev message from demo-service1 - attached2
 
 management:
   security:
