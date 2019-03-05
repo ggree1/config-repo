@@ -7,9 +7,11 @@ management:
       exposure:
         include: "bus-refresh"
 
-
-# rabbitMQ 설정
 spring:
+  cloud:
+    bus:
+      enabled: true
+  # rabbitMQ 설정
   rabbitmq:
     host: localhost
     port: 5672
