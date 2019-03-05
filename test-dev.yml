@@ -1,0 +1,11 @@
+
+configuration:
+  projectName: Demo Service in Dev
+
+test:
+  message: test message
+
+management:
+  security:
+    enabled: false
+
