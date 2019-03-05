@@ -2,4 +2,4 @@ configuration:
   projectName: Demo Service in Prod
 
 test:
-  message: prod message
+  message: prod message from demo-service2
