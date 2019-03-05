@@ -1,5 +1,0 @@
-configuration:
-  projectName: Demo Service in Prod
-
-test:
-  message: prod message
