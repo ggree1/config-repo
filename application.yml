@@ -1,0 +1,8 @@
+# 공통 설정
+
+# actuator 허용 url (refresh scope 사용 위한 설정 - 2.0 이후)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "refresh"
