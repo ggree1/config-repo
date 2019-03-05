@@ -3,7 +3,7 @@ configuration:
   projectName: Demo Service in Dev
 
 test:
-  message: test message
+  message: dev message
 
 management:
   security:
