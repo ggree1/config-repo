@@ -5,10 +5,12 @@
 zuul:
   routes:
     demo-service1:
+      stripPrefix: false
       path: /hello/**
       url: http://localhost:8081/hello/
       serviceId: demo-service1
     demo-service2:
+      stripPrefix: false
       path: /bye/**
       url: http://localhost:8082/bye/
       serviceId: demo-service2
@@ -21,3 +23,28 @@ zuul:
 #    legacyApiServiceName:
 #      path: /**
 #      url: http://legacyApiServiceDomain
+
+
+hystrix:
+  command:
+    demo-service1:
+      execution:
+        isolation:
+          thread:
+            # Ribbon의 각 timeout보다 커야 기대하는대로 동작함
+            timeoutInMilliseconds: 5000
+
+    demo-service2:
+      execution:
+        isolation:
+          thread:
+            # Ribbon의 각 timeout보다 커야 기대하는대로 동작함
+            timeoutInMilliseconds: 5000
+
+demo-service1:
+  ribbon:
+    NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+    ConnectTimeout: 1000
+    ReadTimeout: 3000
+    MaxTotalHttpConnections: 500
+    MaxConnectionsPerHost: 100
