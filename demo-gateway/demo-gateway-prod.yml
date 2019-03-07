@@ -3,8 +3,6 @@
 # would have the same result.
 
 zuul:
-  debug:
-    request: true
   routes:
     demo-service1:
       path: /hello/**
