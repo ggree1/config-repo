@@ -1,5 +1,8 @@
 # 공통 설정
 
+zuul-server:
+  url: http://localhost
+
 # actuator url 허용, bus.enabled=true (refresh scope 사용 위한 설정 - 2.0 이후) http://localhost:8082/actuator/bus-refresh
 management:
   endpoints:
