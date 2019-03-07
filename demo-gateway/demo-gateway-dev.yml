@@ -9,9 +9,11 @@ zuul:
     demo-service1:
       path: /hello/**
       url: http://localhost:8081/hello/
+      serviceId: demo-service1
     demo-service2:
       path: /bye/**
       url: http://localhost:8082/bye/
+      serviceId: demo-service2
 
 # http://localhost/actuator/routes
 
