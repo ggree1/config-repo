@@ -5,12 +5,12 @@
 zuul:
   routes:
     demo-service1:
-      stripPrefix: false
+      #stripPrefix: false
       path: /hello/**
       url: http://localhost:8081/hello/
       serviceId: demo-service1
     demo-service2:
-      stripPrefix: false
+      #stripPrefix: false
       path: /bye/**
       url: http://localhost:8082/bye/
       serviceId: demo-service2
