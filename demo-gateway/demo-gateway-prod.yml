@@ -1,0 +1,23 @@
+# http://localhost/demo-service1/hello/dk
+# http://localhost/hello/dk
+# would have the same result.
+
+zuul:
+  debug:
+    request: true
+  routes:
+    demo-service1:
+      path: /hello/**
+      url: http://localhost:8081/hello/
+    demo-service2:
+      path: /bye/**
+      url: http://localhost:8082/bye/
+
+#zuul:
+#  routes:
+#    newApiServiceName:
+#      path: info/notice/**
+#      url: http://newApiServiceDomain/v1/notice
+#    legacyApiServiceName:
+#      path: /**
+#      url: http://legacyApiServiceDomain
