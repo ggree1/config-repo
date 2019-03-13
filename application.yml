@@ -10,11 +10,6 @@ management:
   security:
     enabled: false
 
-spring:
-  cloud:
-    bus:
-      enabled: true
-
   # rabbitMQ 설정
   rabbitmq:
     host: localhost
