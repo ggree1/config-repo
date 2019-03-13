@@ -5,13 +5,14 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
-        #include: info, routes, filters, bus-refresh, hystrix.stream
+        #include: "*"
+        include: info, routes, filters, bus-refresh, hystrix.stream, monitor
 
 spring:
   cloud:
     bus:
       enabled: true
+
   # rabbitMQ 설정
   rabbitmq:
     host: localhost
