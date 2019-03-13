@@ -3,5 +3,6 @@ configuration:
   projectName: Demo Service in Dev
 
 test:
-  message: dev message from demo-service1 - 20190306 4:38
+  message: new message!
+
 
