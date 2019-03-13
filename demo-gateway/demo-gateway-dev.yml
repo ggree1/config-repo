@@ -9,17 +9,17 @@ zuul:
   routes:
     demo-service1: # http://demo-service1/hello/** 로 들어오는 요청은 하단 serviceId (유레카에 등록된 이름) 서비스로 전송된다.
       path: /demo1/**
-      #serviceId: demo-service1
+      serviceId: demo-service1
       url: http://localhost:8081/demo1/
       #stripPrefix: false
     demo-service2:
       path: /demo2/**
-      #serviceId: demo-service2
+      serviceId: demo-service2
       url: http://localhost:8082/demo2/
       #stripPrefix: false
     rest-service:
       path: /api/**
-      #serviceId: rest-service
+      serviceId: rest-service
       url: http://localhost:8083/api/ # url 없으면 유레카에 등록된 application.name(serviceId) 로 전달한다. (url 굳이 필요 없다)
       #stripPrefix: false
 
