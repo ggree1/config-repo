@@ -1,26 +1,27 @@
 # http://localhost/demo-service1/hello/dk
 # http://localhost/hello/dk
 # would have the same result by using serviceId
+# 서비스들중에 path: ** 로 주면 zuul서버에 대한 /actuator/routes 도 아래 서비스에서 실행되어 동작 안하게 된다.
 
 zuul:
   debug:
     request: true
   routes:
     demo-service1: # http://demo-service1/hello/** 로 들어오는 요청은 하단 serviceId (유레카에 등록된 이름) 서비스로 전송된다.
-      #stripPrefix: false
       path: /demo1/**
-      #url: http://localhost:8081/demo1/
       serviceId: demo-service1
+      #url: http://localhost:8081/demo1/
+      #stripPrefix: false
     demo-service2:
-      #stripPrefix: false
       path: /demo2/**
-      #url: http://localhost:8082/demo2/
       serviceId: demo-service2
-    rest-service:
+      #url: http://localhost:8082/demo2/
       #stripPrefix: false
-      path: api/** # ** 로 주면 zuul서버에 대한 /actuator/routes 도 아래 서비스에서 실행되어 동작 안하게 된다.
-      #url: http://localhost:8083/api/ # url 없으면 유레카에 등록된 application.name(serviceId) 로 전달한다. (url 굳이 필요 없다)
+    rest-service:
+      path: /api/**
       serviceId: rest-service
+      #url: http://localhost:8083/api/ # url 없으면 유레카에 등록된 application.name(serviceId) 로 전달한다. (url 굳이 필요 없다)
+      #stripPrefix: false
 
 eureka:
   client:
