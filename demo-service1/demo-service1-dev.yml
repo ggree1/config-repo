@@ -3,6 +3,6 @@ configuration:
   projectName: Demo Service in Dev
 
 test:
-  message: T.T
+  message: kkk
 
 
