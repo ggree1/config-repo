@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${eureka-default.uri}
+      defaultZone: http://localhost:8761/eureka/
 
 configuration:
   projectName: Demo Service in Dev
