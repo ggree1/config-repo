@@ -5,7 +5,6 @@ management:
   endpoints:
     web:
       exposure:
-        #include: "*"
         include: info, routes, filters, bus-refresh, hystrix.stream, monitor
 
 spring:

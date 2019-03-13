@@ -3,6 +3,6 @@ configuration:
   projectName: Demo Service in Dev
 
 test:
-  message: new message!
+  message: lol!!
 
 
