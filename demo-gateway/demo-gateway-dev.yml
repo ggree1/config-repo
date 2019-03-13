@@ -16,6 +16,9 @@ zuul:
       path: /bye/**
       url: http://localhost:8082/bye/
       serviceId: demo-service2
+    rest-service:
+      path: /**
+      serviceId: rest-service
 
 eureka:
   client:
