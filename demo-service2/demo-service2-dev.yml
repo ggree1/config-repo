@@ -5,7 +5,4 @@ configuration:
 test:
   message: dev message from demo-service2
 
-management:
-  security:
-    enabled: false
 
