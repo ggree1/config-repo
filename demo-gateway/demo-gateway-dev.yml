@@ -8,12 +8,12 @@ zuul:
   routes:
     demo-service1: # http://demo-service1/hello/** 로 들어오는 요청은 하단 serviceId (유레카에 등록된 이름) 서비스로 전송된다.
       #stripPrefix: false
-      path: demo1/**
+      path: /demo1/**
       #url: http://localhost:8081/demo1/
       serviceId: demo-service1
     demo-service2:
       #stripPrefix: false
-      path: demo2/**
+      path: /demo2/**
       #url: http://localhost:8082/demo2/
       serviceId: demo-service2
     rest-service:
