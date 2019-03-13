@@ -3,17 +3,24 @@
 # would have the same result.
 
 zuul:
+  debug:
+    request: true
   routes:
-    demo-service1:
-      #stripPrefix: false
-      path: /hello/**
-      url: http://localhost:8081/hello/
+    demo-service1: # http://demo-service1/hello/** 로 들어오는 요청은 하단 serviceId (유레카에 등록된 이름) 서비스로 전송된다.
+      path: /demo1/**
       serviceId: demo-service1
-    demo-service2:
+      url: http://localhost:8081/demo1/
       #stripPrefix: false
-      path: /bye/**
-      url: http://localhost:8082/bye/
+    demo-service2:
+      path: /demo2/**
       serviceId: demo-service2
+      url: http://localhost:8082/demo2/
+      #stripPrefix: false
+    rest-service:
+      path: /api/**
+      serviceId: rest-service
+      url: http://localhost:8083/api/ # url 없으면 유레카에 등록된 application.name(serviceId) 로 전달한다. (url 굳이 필요 없다)
+      #stripPrefix: false
 
 eureka:
   client:
