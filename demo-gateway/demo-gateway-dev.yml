@@ -6,7 +6,7 @@ zuul:
   debug:
     request: true
   routes:
-    demo-service1:
+    demo-service1: # http://demo-service1/hello/** 로 들어오는 요청은 하단 serviceId (유레카에 등록된 이름) 서비스로 전송된다.
       #stripPrefix: false
       path: /hello/**
       url: http://localhost:8081/hello/
