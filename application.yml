@@ -10,17 +10,14 @@ management:
   security:
     enabled: false
 
-  # rabbitMQ 설정
+# rabbitMQ 설정
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-      #defaultZone: http://localhost:8761/eureka/, http://localhost:8762/eureka/
-    register-with-eureka: true
-    fetch-registry: true
+# eureka defaultZone
+eureke-default:
+  uri: http://localhost:8761/eureka/
+  #uri: http://localhost:8761/eureka/, http://localhost:8762/eureka/

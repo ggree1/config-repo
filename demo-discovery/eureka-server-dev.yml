@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka-default.uri}
+    register-with-eureka: false
+    fetch-registry: false

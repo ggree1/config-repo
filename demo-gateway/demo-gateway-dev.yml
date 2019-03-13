@@ -17,6 +17,11 @@ zuul:
       url: http://localhost:8082/bye/
       serviceId: demo-service2
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${eureka-default.uri}
+
 # http://localhost/actuator/routes
 
 #zuul:
