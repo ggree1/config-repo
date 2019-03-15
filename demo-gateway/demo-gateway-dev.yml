@@ -28,6 +28,16 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+ribbon:
+  ConnectTimeout:  10000
+  ReadTimeout:  10000
+
 # http://localhost/actuator/routes
 
 #zuul:
