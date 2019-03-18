@@ -7,6 +7,20 @@ configuration:
   projectName: Demo Service in Dev
 
 test:
-  message: hey yo
+  message: demo-service1 test message
 
+hystrix:
+  command:
+    userListWithItem:  # command key. use 'default' for global setting.
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000   # default 1,000ms - ribbon의 타임아웃보다 우선한다.
+      circuitBreaker:
+        requestVolumeThreshold: 5    # Minimum number of request to calculate circuit breaker's health. default 20
+        errorThresholdPercentage: 40 # Error percentage to open circuit. default 50
 
+rest-service:
+  ribbon:
+    MaxAutoRetries: 0  # Retry 횟수 default 0
+    MaxAutoRetriesNextServer: 1 # Retry할 다음 서버 수 default 1
