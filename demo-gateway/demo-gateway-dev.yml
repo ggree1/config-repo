@@ -1,7 +1,7 @@
 
 zuul:
-  ignoredServices: '*'  # routes에 정의되지 않은 모든 요청은 무시 함
-  sensitive-headers: # 특정 헤더를 명시하면 라우팅 전에 해당 헤더를 제거한다
+  #ignoredServices: '*'  # routes에 정의되지 않은 모든 요청은 무시 함
+  #sensitive-headers: # 특정 헤더를 명시하면 라우팅 전에 해당 헤더를 제거한다
   host:
     connect-timeout-millis: 30000  # api 요청 후 연결까지의 타임아웃. 초과시 ZuulException 발생
     socket-timeout-millis: 30000 # api 요청 후 응답까지의 타임아웃. 초과시 ZuulException 발생
