@@ -42,7 +42,7 @@ ribbon:
 
 logging:
   level:
-    root: debug
+    root: info
 
 # http://localhost/actuator/routes
 
