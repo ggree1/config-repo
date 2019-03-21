@@ -40,6 +40,10 @@ ribbon:
   ConnectTimeout:  10000
   ReadTimeout:  10000
 
+logging:
+  level:
+    root: debug
+
 # http://localhost/actuator/routes
 
 #zuul:
