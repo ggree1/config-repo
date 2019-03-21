@@ -1,7 +1,7 @@
 
 zuul:
   debug:
-    request: true
+    request: false
   ignoredServices: '*'  # routes에 정의되지 않은 모든 요청은 무시
   sensitive-headers: # 특정 헤더를 명시하면 라우팅 전에 해당 헤더를 제거한다
   host:
@@ -12,7 +12,7 @@ zuul:
       serviceId: demo-service1
       path: /demo1/**  # http://zuul/demo1/** 로 요청시 내부적으로 유레카를 이용해 //demo-service1/demo1/** 로 요청한다.
       #url: http://localhost:8081/demo1/   # url을 명시하면 Ribbon 을 사용하지 않는다.
-      stripPrefix: false # true(default) 설정 시 url에서 path부분 제거되고 나머지만 추가되어 라우팅된다.
+      stripPrefix: false # tr ue(default) 설정 시 url에서 path부분 제거되고 나머지만 추가되어 라우팅된다.
     demo-service2:
       serviceId: demo-service2
       path: /demo2/**
