@@ -9,20 +9,20 @@ zuul:
   #  socket-timeout-millis: 30000 # api 요청 후 응답까지의 타임아웃. 초과시 ZuulException 발생
   routes:
     demo-service1:
-      path: /demo1/**
       serviceId: demo-service1
+      path: /demo1/**
       #url: http://localhost:8081/demo1/   # url을 명시하면 Ribbon 을 사용하지 않는다.
-      stripPrefix: false # true(default) 설정 시 url에서 path부분 제거되고 나머지만 추가되어 라우팅된다.
+      #stripPrefix: false # true(default) 설정 시 url에서 path부분 제거되고 나머지만 추가되어 라우팅된다.
     demo-service2:
-      path: /demo2/**
       serviceId: demo-service2
+      path: /demo2/**
       #url: http://localhost:8082/demo2/
-      stripPrefix: false
+      #stripPrefix: false
     rest-service:
-      path: /api/**
       serviceId: rest-service
+      path: /api/**
       #url: http://localhost:8083/api/
-      stripPrefix: false
+      #stripPrefix: false
 
 eureka:
   client:
