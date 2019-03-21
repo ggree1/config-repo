@@ -1,8 +1,8 @@
 
 zuul:
+  include-debug-header: true   # true인 경우 (debug.request=false일때) url?debug=true 로 요청시 response header에 debug 표시
   debug:
-    request: false
-  include-debug-header: true
+    request: false   # true 설정시 include-debug-header = true 인 경우 response header에 debug 표시
   ignoredServices: '*'  # routes에 정의되지 않은 모든 요청은 무시
   sensitive-headers: # 특정 헤더를 명시하면 라우팅 전에 해당 헤더를 제거한다
   host:
