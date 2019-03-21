@@ -1,7 +1,7 @@
 
 zuul:
   debug:
-    request: true
+    request: false
   include-debug-header: true
   ignoredServices: '*'  # routes에 정의되지 않은 모든 요청은 무시
   sensitive-headers: # 특정 헤더를 명시하면 라우팅 전에 해당 헤더를 제거한다
